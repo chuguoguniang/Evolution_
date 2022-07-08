@@ -62,6 +62,7 @@ cat ./Homo_sapiens.GRCh38.pep.all.fa | grep ">" | grep -f CDD.result.1.tsv | cut
 以上是人类中肌动蛋白基因鉴定的流程，其余6个物种方法同上。
 
 ## 二、鉴定黑猩猩肌动蛋白基因 
+```
 cat chimpanzee.fa | grep '>' | sort | uniq | wc -l
 #71条氨基酸序列
 
@@ -83,8 +84,10 @@ faops some Pan_troglodytes.Pan_tro_3.0.pep.all.fa protein_ID1.lst chimpanzee_cdd
 下载输出结果文件：chimpanzee.cdd.result.txt
 cat chimpanzee.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > chimpanzee.cdd.result.1.tsv
 cat ./Pan_troglodytes.Pan_tro_3.0.pep.all.fa | grep ">" | grep -f chimpanzee.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l #33个基因
+```
 
 ## 三、鉴定大猩猩肌动蛋白基因
+```
 cat gorilla.fa | grep '>' | sort | uniq | wc -l
 #64条氨基酸序列  Biomart下载时count 32个基因
 faops size gorilla.fa | tsv-filter --ge 2:160  | wc -l 
@@ -110,8 +113,10 @@ CDD:
 下载输出结果文件：gorilla.cdd.result.txt
 cat gorilla.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > gorilla.cdd.result.1.tsv
 cat ./Gorilla_gorilla.gorGor4.pep.all.fa | grep ">" | grep -f gorilla.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l  #30个基因
+```
 
 ## 四、鉴定红毛猩猩肌动蛋白基因
+```
 cat sumatran_orangutan.fa | grep ">" | wc -l 
 #42条氨基酸序列 Biomart下载时count 29个基因
 
@@ -132,8 +137,10 @@ faops some Pongo_abelii.Susie_PABv2.pep.all.fa protein_ID1.lst sumatran_oranguta
 下载输出文件：sumatran_orangutan.cdd.result.txt 逐行查看，和actin无关的看是否有和其相同的序列含有actin ，比如Q#6 - >ENSPPYP00000033681.1可能在两行出现，一行里含actin相关的，另一行不含
 cat sumatran_orangutan.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > sumatran_orangutan.cdd.result.1.tsv
 cat ./Pongo_abelii.Susie_PABv2.pep.all.fa | grep ">" | grep -f sumatran_orangutan.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l  #27个基因
+```
 
 ## 五、鉴定长臂猿肌动蛋白基因
+```
 cat gibbon.fa | grep ">" | wc -l 
 #48条氨基酸序列 26个基因
 faops size gibbon.fa | tsv-filter --ge 2:160  | wc -l 
@@ -154,8 +161,10 @@ CDD:
 cat gibbon.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > gibbon.cdd.result.1.tsv
 cat ./Nomascus_leucogenys.Nleu_3.0.pep.all.fa | grep ">" | grep -f gibbon.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l
 #26个基因
+```
 
 ## 六、鉴定猕猴肌动蛋白基因
+```
 cat macaque.fa | grep ">" | wc -l 
 #55条氨基酸序列  30个基因 （看Gene stable ID version得30 而不是Gene name ，因为有些没有Gene name）
 faops size macaque.fa | tsv-filter --ge 2:160  | wc -l 
@@ -176,8 +185,10 @@ CDD:
 cat macaque.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > macaque.cdd.result.1.tsv
 cat ./Macaca_mulatta.Mmul_10.pep.all.fa | grep ">" | grep -f macaque.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l
 #30个基因
+```
 
 ## 七、鉴定白簇耳狨猴肌动蛋白基因
+```
 cat  marmoset.fa | grep ">" | wc -l 
 #62条氨基酸序列 38个基因
 faops size marmoset.fa | tsv-filter --ge 2:160  | wc -l 
@@ -198,3 +209,4 @@ CDD:
 cat marmoset.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > marmoset.cdd.result.1.tsv
 cat ./Callithrix_jacchus.mCalJac1.pat.X.pep.all.fa | grep ">" | grep -f marmoset.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l
 #34个基因
+```
