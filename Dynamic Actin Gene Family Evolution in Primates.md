@@ -251,7 +251,7 @@ cat aa.all.fa | grep ">" | wc -l
 ## 二、序列比对和系统发育分析
 ### 1、氨基酸序列比对和建树
 + 氨基酸序列比对，选ClustalW（大约8分钟）后，保存。#可以比对了，或许正是前面将小于160aa的序列去除的缘故。
-+ 建树，但是找不到文章中的Jukes-Cantor模型，所以建树采用Jukes— 模型，NJ bootstrp 1000replicates 。其余参数默认。近三小时还在运行，未见报错。
++ 建树，但是找不到文章中的Jukes-Cantor模型，所以建树采用JTT 模型，NJ bootstrp 1000replicates 。其余参数默认。约六个小时出现错误，显示bootstrp只进行998replicates. 所以我调整，将bootstrp由1000replicates设到997，还是出现类似错误，似乎有3个replicates没进行，然后也没见结果。
 
 
 ### 2、CDS序列比对和建树
@@ -290,7 +290,11 @@ cat cds.all.fa | grep ">" | wc -l
 ```
 + CDS序列比对
 ```
-选ClustalW。10分钟还未比对完。
+选ClustalW。10分钟还未比对完。后面发现出现序列差异大的提示，所以把小于1000核苷酸的序列去除后再比
+faops size cds.all.fa |tsv-filter --ge 2:1000 | cut -f 1 > cds.ge1000.lst
+faops some cds.all.fa cds.ge1000.lst cds.all.ge1000.fa
+再次比对CDS（7个物种在一起的CDS序列），比对选ClustalW. 选align DNA 而不是align codons，因为选align codons显示终止密码子出现在翻译区
+把小于1000核苷酸的cds序列去除后还是出现序列差异大。
 
 ```
 
