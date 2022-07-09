@@ -1,8 +1,9 @@
 # Dynamic Actin Gene Family Evolution in Primates
 
 
-## 一、鉴定人肌动蛋白基因 
-1. Downloaded protein sequences which were limited to genes with actin domain (Pfam:PF00022) from Biomart
+## 一、鉴定肌动蛋白基因
+### 1、鉴定人肌动蛋白基因 
++ Downloaded protein sequences which were limited to genes with actin domain (Pfam:PF00022) from Biomart
 ```
 #计数其中人氨基酸序列
 cat human.fa | grep '>' | wc -l
@@ -21,7 +22,7 @@ faops size human.fa | tsv-filter --ge 2:160 | cut -f 1 >human.160.fa
 faops some human.fa human.160.fa human_ge160.fa
 ```
 
-2. the amino acid sequences of all known actin genes were adopted as queries in local BLASTP 
++ the amino acid sequences of all known actin genes were adopted as queries in local BLASTP 
 ```
 #安装blast
 brew install blast
@@ -45,7 +46,7 @@ cat result2.tsv | cut -f 2 | sort | uniq > protein_ID2.lst
 #protein_ID2.lst 与protein_ID1.lst同，所以CDD输入序列可以用blastp2query.fa
 
 ```
-3. Based on the BLASTP results, all genes were verified with the conserved actin domain by researching in corresponding Conserved Domain Database (CDD) online
++ Based on the BLASTP results, all genes were verified with the conserved actin domain by researching in corresponding Conserved Domain Database (CDD) online
 ```
 在Batch CD-Search中上传blastp2query.fa 数据库选择NCBI_Curated --17937 PSSMs 其它参数默认
 下载consize结果（比对效果佳的留下），对结果逐行查看，与actin均有关系
@@ -61,7 +62,7 @@ cat ./Homo_sapiens.GRCh38.pep.all.fa | grep ">" | grep -f CDD.result.1.tsv | cut
 
 以上是人类中肌动蛋白基因鉴定的流程，其余6个物种方法同上。
 
-## 二、鉴定黑猩猩肌动蛋白基因 
+### 2、鉴定黑猩猩肌动蛋白基因 
 ```
 cat chimpanzee.fa | grep '>' | sort | uniq | wc -l
 #71条氨基酸序列
@@ -86,7 +87,7 @@ cat chimpanzee.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > chimpanzee.cdd.resu
 cat ./Pan_troglodytes.Pan_tro_3.0.pep.all.fa | grep ">" | grep -f chimpanzee.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l #33个基因
 ```
 
-## 三、鉴定大猩猩肌动蛋白基因
+### 3、鉴定大猩猩肌动蛋白基因
 ```
 cat gorilla.fa | grep '>' | sort | uniq | wc -l
 #64条氨基酸序列  Biomart下载时count 32个基因
@@ -115,7 +116,7 @@ cat gorilla.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > gorilla.cdd.result.1.t
 cat ./Gorilla_gorilla.gorGor4.pep.all.fa | grep ">" | grep -f gorilla.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l  #30个基因
 ```
 
-## 四、鉴定红毛猩猩肌动蛋白基因
+### 4、鉴定红毛猩猩肌动蛋白基因
 ```
 cat sumatran_orangutan.fa | grep ">" | wc -l 
 #42条氨基酸序列 Biomart下载时count 29个基因
@@ -139,7 +140,7 @@ cat sumatran_orangutan.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > sumatran_or
 cat ./Pongo_abelii.Susie_PABv2.pep.all.fa | grep ">" | grep -f sumatran_orangutan.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l  #27个基因
 ```
 
-## 五、鉴定长臂猿肌动蛋白基因
+### 5、鉴定长臂猿肌动蛋白基因
 ```
 cat gibbon.fa | grep ">" | wc -l 
 #48条氨基酸序列 26个基因
@@ -163,7 +164,7 @@ cat ./Nomascus_leucogenys.Nleu_3.0.pep.all.fa | grep ">" | grep -f gibbon.cdd.re
 #26个基因
 ```
 
-## 六、鉴定猕猴肌动蛋白基因
+### 6、鉴定猕猴肌动蛋白基因
 ```
 cat macaque.fa | grep ">" | wc -l 
 #55条氨基酸序列  30个基因 （看Gene stable ID version得30 而不是Gene name ，因为有些没有Gene name）
@@ -187,7 +188,7 @@ cat ./Macaca_mulatta.Mmul_10.pep.all.fa | grep ">" | grep -f macaque.cdd.result.
 #30个基因
 ```
 
-## 七、鉴定白簇耳狨猴肌动蛋白基因
+### 7、鉴定白簇耳狨猴肌动蛋白基因
 ```
 cat  marmoset.fa | grep ">" | wc -l 
 #62条氨基酸序列 38个基因
@@ -210,3 +211,88 @@ cat marmoset.cdd.result.txt | cut -f 1 | cut -d ">" -f 2 > marmoset.cdd.result.1
 cat ./Callithrix_jacchus.mCalJac1.pat.X.pep.all.fa | grep ">" | grep -f marmoset.cdd.result.1.tsv | cut -d " " -f 4 | sort | uniq | wc -l
 #34个基因
 ```
+### 小结
++ 共鉴定7个物种210个actin gene
+
++ 整理7个物种actin基因的氨基酸序列:
+```
+1. human:
+mv CDD.result.1.tsv CDD.result.1.lst
+faops some Homo_sapiens.GRCh38.pep.all.fa CDD.result.1.lst human.actin.aa.fa
+2. chimpanzee:
+mv chimpanzee.cdd.result.1.tsv chimpanzee.cdd.result.1.lst
+faops some Pan_troglodytes.Pan_tro_3.0.pep.all.fa chimpanzee.cdd.result.1.lst chimpanzee.actin.aa.fa
+3. gibbon:
+mv gibbon.cdd.result.1.tsv gibbon.cdd.result.1.lst
+faops some Nomascus_leucogenys.Nleu_3.0.pep.all.fa gibbon.cdd.result.1.lst gibbon.actin.aa.fa
+4. gorilla:
+mv gorilla.cdd.result.1.tsv gorilla.cdd.result.1.lst
+faops some Gorilla_gorilla.gorGor4.pep.all.fa gorilla.cdd.result.1.lst gorilla.actin.aa.fa
+5. macaque:
+mv macaque.cdd.result.1.tsv macaque.cdd.result.1.lst
+faops some Macaca_mulatta.Mmul_10.pep.all.fa macaque.cdd.result.1.lst macaque.actin.aa.fa
+6. marmoset:
+mv marmoset.cdd.result.1.tsv marmoset.cdd.result.1.lst
+faops some Callithrix_jacchus.mCalJac1.pat.X.pep.all.fa marmoset.cdd.result.1.lst marmoset.actin.aa.fa
+7. sumatran_orangutan
+mv sumatran_orangutan.cdd.result.1.tsv sumatran_orangutan.cdd.result.1.lst
+faops some Pongo_abelii.Susie_PABv2.pep.all.fa sumatran_orangutan.cdd.result.1.lst sumatran_orangutan.actin.aa.fa
+
+```
++ 合并7个物种actin基因的氨基酸序列:(进入指定文件夹/mnt/d/0~GitHub/Evolution_/MEGA/aa)
+```
+JOB=$(ls)
+for i in $JOB; do cat $i >> aa.all.fa; done
+
+cat aa.all.fa | grep ">" | wc -l 
+#372
+```
+
+## 二、序列比对和系统发育分析
+### 1、氨基酸序列比对和建树
++ 氨基酸序列比对，选ClustalW（大约8分钟）后，保存。#可以比对了，或许正是前面将小于160aa的序列去除的缘故。
++ 建树，但是找不到文章中的Jukes-Cantor模型，所以建树采用Jukes— 模型，NJ bootstrp 1000replicates 。其余参数默认。近三小时还在运行，未见报错。
+
+
+### 2、CDS序列比对和建树
++ 得到CDS序列尝试1——失败
+```
+生成Biomart上传所需的文件(含Gene stable ID(s) with version)
+cat ./Pan_troglodytes.Pan_tro_3.0.pep.all.fa | grep ">" | grep -f chimpanzee.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > chimpanzee.cds.lst
+cat ./Nomascus_leucogenys.Nleu_3.0.pep.all.fa | grep ">" | grep -f gibbon.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > gibbon.cds.lst
+cat ./Gorilla_gorilla.gorGor4.pep.all.fa | grep ">" | grep -f gorilla.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > gorilla.cds.lst
+cat ./Homo_sapiens.GRCh38.pep.all.fa | grep ">" | grep -f CDD.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > human.cds.lst
+cat ./Macaca_mulatta.Mmul_10.pep.all.fa | grep ">" | grep -f macaque.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > macaque.cds.lst
+cat ./Callithrix_jacchus.mCalJac1.pat.X.pep.all.fa | grep ">" | grep -f marmoset.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > marmoset.cds.lst
+cat ./Pongo_abelii.Susie_PABv2.pep.all.fa | grep ">" | grep -f sumatran_orangutan.cdd.result.1.lst | cut -d " " -f 4 | sort | uniq | cut -d ":" -f 2 > sumatran_orangutan.cds.lst
+
+Biomart下载好后，将7个物种的cds合并为一个文件用于MEGA比对
+JOB=$(ls)
+for i in $JOB; do cat $i >> cds.all.fa; done
+cat cds.all.fa | grep ">" | wc -l 
+#514 由基因下CDS，对应的蛋白是有小于160aa的，数量和aa数量372对不上，所以换成在Biomart上传含有Protein stable ID(s) with version的文件去下载CDS
+```
++ 得到CDS序列尝试2——成功
+```
+cat human.actin.aa.fa | grep ">" | cut -d ">" -f 2 > human.cds.lst
+cat chimpanzee.actin.aa.fa | grep ">" | cut -d ">" -f 2 > chimpanzee.cds.lst
+cat gorilla.actin.aa.fa | grep ">" | cut -d ">" -f 2 > gorilla.cds.lst
+cat marmoset.actin.aa.fa | grep ">" | cut -d ">" -f 2 > marmoset.cds.lst
+cat gibbon.actin.aa.fa | grep ">" | cut -d ">" -f 2 > gibbon.cds.lst
+cat macaque.actin.aa.fa | grep ">" | cut -d ">" -f 2 > macaque.cds.lst
+cat sumatran_orangutan.actin.aa.fa | grep ">" | cut -d ">" -f 2 > sumatran_orangutan.cds.lst
+
+Biomart下载好后，将7个物种的cds合并为一个文件用于MEGA比对
+JOB=$(ls) #文件夹下只有这七个文件
+for i in $JOB; do cat $i >> cds.all.fa; done
+cat cds.all.fa | grep ">" | wc -l 
+#372 此时和aa序列数是一致的，这才方便aa序列指导cds序列比对吧，或者说前面删除的小于160的aa才有意义吧
+```
++ CDS序列比对
+```
+选ClustalW。10分钟还未比对完。
+
+```
+
+
+
