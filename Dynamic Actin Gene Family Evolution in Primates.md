@@ -251,7 +251,7 @@ cat aa.all.fa | grep ">" | wc -l
 ## 二、序列比对和系统发育分析
 ### 1、氨基酸序列比对和建树
 + 氨基酸序列比对，选ClustalW（大约8分钟）后，保存。#可以比对了，或许正是前面将小于160aa的序列去除的缘故。
-+ 建树，但是找不到文章中的Jukes-Cantor模型，所以建树采用JTT 模型，NJ bootstrp 1000replicates 。其余参数默认。约六个小时出现错误，显示bootstrp只进行998replicates. 所以我调整，将bootstrp由1000replicates设到997，还是出现类似错误，似乎有3个replicates没进行，然后也没见结果。
++ 建树，但是找不到文章中的Jukes-Cantor模型，所以建树采用JTT 模型，NJ bootstrap 1000replicates 。其余参数默认。约六个小时出现错误，显示bootstrap只进行998replicates. 所以我调整，将bootstrap由1000replicates设到997，还是出现类似错误，似乎有3个replicates没进行，然后也没见结果。bootstrap调成500 replicates出现和白天一样的提示，并没有到设定的replicates。但是有tree文件。不过文章是用核苷酸序列建树的，所以氨基酸序列还需要建吗？
 
 
 ### 2、CDS序列比对和建树
@@ -295,7 +295,74 @@ faops size cds.all.fa |tsv-filter --ge 2:1000 | cut -f 1 > cds.ge1000.lst
 faops some cds.all.fa cds.ge1000.lst cds.all.ge1000.fa
 再次比对CDS（7个物种在一起的CDS序列），比对选ClustalW. 选align DNA 而不是align codons，因为选align codons显示终止密码子出现在翻译区
 把小于1000核苷酸的cds序列去除后还是出现序列差异大。
+将ClustalW换成muscle比对核苷酸序列，没有报错，但是当把比对后的核苷酸序列用于建树时，发现有名称重复，因为CDS下载时选的Gene stable ID version和基因，7个物种CDS序列合并后计数是372，但不重复的才210
 
+所以重新下载CDS序列，名称改为基因和Protein stable ID，按文章的意思，没有基因的以Protein stable ID表示序列
+Biomart下载好后，将7个物种的cds合并为一个文件用于MEGA比对
+JOB=$(ls) #文件夹下只有这七个文件
+for i in $JOB; do cat $i >> cds.all.fa; done
+cat cds.all.fa | grep ">" | wc -l  #372
+cat cds.all.fa | grep ">" | sort | uniq | wc -l  #372不重复了，这次应该可以正常比对和建树，按依据文章，改名字：由基因名的用基因名，没有的用Protein stable ID，后面加每个物种的后缀。
+```
+cat human.cds.fa | grep ">" >human.replace.csv
+在csv中手动操作
+cat human.replace.csv | tr "," "\t" > human.replace.tsv
+faops replace -s human.cds.fa human.replace.tsv human.cds.1.fa (在此human.cds.fa 和 human.replace.tsv是对应的，加不加-s都一样)
+
+cat chimpanzee.cds.fa | grep ">" >chimpanzee.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat chimpanzee.replace.csv | tr "," "\t" > chimpanzee.replace.tsv
+faops replace -s chimpanzee.cds.fa chimpanzee.replace.tsv chimpanzee.cds.1.fa
+
+cat gorilla.cds.fa | grep ">" >gorilla.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat gorilla.replace.csv | tr "," "\t" > gorilla.replace.tsv
+faops replace -s gorilla.cds.fa gorilla.replace.tsv gorilla.cds.1.fa
+
+cat sumatran_orangutan.cds.fa | grep ">" >sumatran_orangutan.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat sumatran_orangutan.replace.csv | tr "," "\t" > sumatran_orangutan.replace.tsv
+faops replace -s sumatran_orangutan.cds.fa sumatran_orangutan.replace.tsv sumatran_orangutan.cds.1.fa
+
+cat gibbon.cds.fa | grep ">" >gibbon.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat gibbon.replace.csv | tr "," "\t" > gibbon.replace.tsv
+faops replace -s gibbon.cds.fa gibbon.replace.tsv gibbon.cds.1.fa
+
+cat macaque.cds.fa | grep ">" >macaque.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat macaque.replace.csv | tr "," "\t" > macaque.replace.tsv
+faops replace -s macaque.cds.fa macaque.replace.tsv macaque.cds.1.fa
+
+cat marmoset.cds.fa | grep ">" >marmoset.replace.csv
+在csv中手动操作（以|分两列，第一列是空的即没基因名的和第二列合并）
+cat marmoset.replace.csv | tr "," "\t" > marmoset.replace.tsv
+faops replace -s marmoset.cds.fa marmoset.replace.tsv marmoset.cds.1.fa
+cat marmoset.cds.1.fa | head -n 20 #看一下替换序列名后的效果
+
+每个物种更改序列名后合并
+JOB=$(ls) #进入一个新的文件夹，文件夹下只有这七个文件
+for i in $JOB; do cat $i >> cds.all.changename.fa; done
+cat cds.all.changename.fa | grep ">" | wc -l  #372
+cat cds.all.changename.fa | grep ">" | sort | uniq | wc -l  #240
+可见以基因名加物种有重复名字出现，所以我一个基因只保留一个最长的氨基酸序列,但由于有些序列没有基因名，所以可能出现15条不重复的序列名字其实对应10个基因。所以用曾师兄帮我写的程序后，达到不再出现重复序列名，但存在有些基因几个序列，这不妨碍比对。
+打开powershell ，输入：python 程序 待处理文件（最后一行下面加>) 生成文件
+具体地：
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\human.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\human.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\chimpanzee.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\chimpanzee.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\gorilla.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\gorilla.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\marmoset.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\marmoset.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\gibbon.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\gibbon.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\macaque.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\macaque.cds.1.longest.fa
+python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\sumatran_orangutan.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\sumatran_orangutan.cds.1.longest.fa
+
+合并为一个
+JOB=$(ls) #文件夹下只有这七个文件
+for i in $JOB; do cat $i >> cds.all.cn.uniq.fa; done
+cat cds.all.cn.uniq.fa | grep ">" | wc -l #240
+cat cds.all.cn.uniq.fa | grep ">" | sort | uniq | wc -l  #240
+
+开始对CDS多序列比对
 ```
 
 
