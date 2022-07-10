@@ -346,7 +346,7 @@ for i in $JOB; do cat $i >> cds.all.changename.fa; done
 cat cds.all.changename.fa | grep ">" | wc -l  #372
 cat cds.all.changename.fa | grep ">" | sort | uniq | wc -l  #240
 可见以基因名加物种有重复名字出现，所以我一个基因只保留一个最长的氨基酸序列,但由于有些序列没有基因名，所以可能出现15条不重复的序列名字其实对应10个基因。所以用曾师兄帮我写的程序后，达到不再出现重复序列名，但存在有些基因几个序列，这不妨碍比对。
-打开powershell ，输入：python 程序 待处理文件（最后一行下面加>) 生成文件
+打开powershell ，输入：python 程序 待处理文件（最后一行下面加>) 生成文件   #注意，程序 待处理文件 生成文件 三者都是带路径的，并且运行前为了判断长度需在待处理文件最后一行下面加>，运行结束将待处理文件和生成文件中最下面一行的>去掉。
 具体地：
 python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\human.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\human.cds.1.longest.fa
 python C:\Users\15560\Desktop\jbs_get_the_longest_sq.py D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\chimpanzee.cds.1.fa D:\0~GitHub\Evolution_\MEGA\cds\outputv2\cds.all.fa.change\chimpanzee.cds.1.longest.fa
