@@ -362,8 +362,14 @@ for i in $JOB; do cat $i >> cds.all.cn.uniq.fa; done
 cat cds.all.cn.uniq.fa | grep ">" | wc -l #240
 cat cds.all.cn.uniq.fa | grep ">" | sort | uniq | wc -l  #240
 
-开始对CDS多序列比对
+开始对CDS多序列比对和建树
+使用muscle进行多序列比对，然后neighbor-joining method with a Jukes-Cantor model   bootstrap analysis with 1000 replicates  大约5分钟建完，生成Original Tree 和 Bootstrap consensus Tree
+
+Ka Ks计算方法：MEGA打开比对好的核苷酸序列，点击DISTANCE, 选择第一个compute pairwise distance , 替换类型同义-非同义，替换包括仅仅同义（同义和非同义分开来），其它参数默认，但记下来。导出到EXCEL，选择老的2007+的版本。另存到一个文件夹，改名ds。dn同理。然后复制dn excel。全选复制ds内容，选择性粘贴到dn，选除。去错，另存为一个文件。
+
+建树后如何分类分组计算PI？
 ```
+## 三、识别假基因
 
 
 
