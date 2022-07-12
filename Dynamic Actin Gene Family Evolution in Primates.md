@@ -370,6 +370,44 @@ Ka Ks计算方法：MEGA打开比对好的核苷酸序列，点击DISTANCE, 选�
 建树后如何分类分组计算PI？
 ```
 ## 三、识别假基因
+假基因（Pseudogenes，Pseudo-意为“假”）是一类染色体上的基因片段。假基因的序列通常与对应的基因相似，但至少是丧失了一部分功能，如基因不能表达或编码的蛋白质没有功能。 #维基百科
+区分假基因和活基因有助于我们了解肌动蛋白基因家族的进化史
+编码一个基因的DNA序列在基因组内完整出现一次，称为该基因的一个拷贝。
+```
+all of the nucleotide sequences of actin domains from seven species were employed to search in all the genomes used in this work (BLASTN).
+blastn：是将给定的核酸序列与核酸数据库中的序列进行比对
 
+1. 下载各物种基因组序列
+方法：进入Ensemble 点击FTP Download ，选择物种，DNA(FASTA),选toplevel下载完整基因组序列。
+
+2. 建库
+makeblastdb -in ./Homo_sapiens.GRCh38.dna.toplevel.fa -dbtype nucl -parse_seqids -out ./index
+blastn -query ./human.cds.fa -db ./index -perc_identity 35 -outfmt 6 -num_threads 4 -out out_file
+
+
+
+chimpanzee:
+gzip -d Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa.gz
+makeblastdb -in ./Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa -dbtype nucl -parse_seqids -out ./index
+blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-30 -qcov_hsp_perc 80 -perc_identity 35 -outfmt 6 -num_threads 4 -out out_file
+```
+## 四、密码子使用
+编码相同氨基酸的不同密码子被称为同义密码子，几乎在所有物种中不均等使用，呈现出基因的进化模式。
+RSCU相对同义密码子使用度。以某一个同义密码子的使用次数为分子，以该密码子预期出现的次数为分母。预测出现的次数为该密码子所编码的氨基酸的所有密码子平均使用的次数。 如果密码子使用没有偏好，则该密码子的RSCU值等于1，大于1表明其使用频率相对较高。
+
+## 五、 肌动蛋白基因表达模式
+计算肌动蛋白基因表达值的变异系数（CV；SD/mean）以估计表达模式。
+
+
+讨论：
+一般来说，基因获得新的功能是由于自我复杂度的增加或拷贝数的变化。增加基因的长度或与其他领域的融合可以增加其复杂性，而复制则提供了一个获得新功能而不失去原有功能的机会。
+对于多基因家族的分化与进化，通常采用“协同进化”和“生灭”模型来解释 。
+由于肌动蛋白家族在细胞活动的各个方面都起着至关重要的作用，其相关功能不容易改变或移除。然而，肌动蛋白基因拷贝数的变化方式可能提供了另一种进化途径，以满足相互冲突的需求，即肌动蛋白被保守以维持重要功能，并在体内进化出新的功能，以帮助适应环境压力。在这种情况下，生物体可能不仅保持身体的正常工作，而且使物种从简单到复杂，从粗略到精细。我们推测，出生和死亡进化模式可能是其他高度保守的多基因家族的共同进化机制。
+Actin genes interspecifically clustered that belong to the orthologous groups were highly conserved because of fundamental importance. On the contrary, complex groups contained
+actin gene members that displayed copy number variation with significantly higher levels of average nucleotide divergence and Ka/Ks ratios compared to the orthologous groups.
+对密码子偏好性和基因表达水平的分析表明，灵长类动物的肌动蛋白基因在物种内存在极大的差异，但在不同物种的群体内高度保守。这些结果可能可以用肌动蛋白基因家族的生灭进化过程来解释，这可能是其他高度保守的多基因家族的一般进化机制。
+
+
+总结：本篇文章拿到手大概两周之久，已了解文章中的技术和用途，具体细节有待钻研。2022.07.12开始阅读一些IV型胶原蛋白演化的文章，尤其关注Gxy重复，制定方案，预计本周末开始做IV型胶原蛋白演化分析。
 
 
