@@ -365,11 +365,33 @@ cat cds.all.cn.uniq.fa | grep ">" | sort | uniq | wc -l  #240
 开始对CDS多序列比对和建树
 使用muscle进行多序列比对，然后neighbor-joining method with a Jukes-Cantor model   bootstrap analysis with 1000 replicates  大约5分钟建完，生成Original Tree 和 Bootstrap consensus Tree
 
+在对所建的树进行分组时，遇到一个问题：可能出现一个物种里一个基因有几条序列，这样它们建完树很容易聚在一起，不好分组，所以改进方法是一个物种中一个基因我只保留最长的CDS序列，7个物种共210条序列。每条序列以‘基因ID—_基因名_物种'的形式命名。ClustalW多序列比对CDS时，出现序列差异大的提示，所以换成muscle比对。
+
 Ka Ks计算方法：MEGA打开比对好的核苷酸序列，点击DISTANCE, 选择第一个compute pairwise distance , 替换类型同义-非同义，替换包括仅仅同义（同义和非同义分开来），其它参数默认，但记下来。导出到EXCEL，选择老的2007+的版本。另存到一个文件夹，改名ds。dn同理。然后复制dn excel。全选复制ds内容，选择性粘贴到dn，选除。去错，另存为一个文件。
 
 建树后如何分类分组计算PI？
+文章的分类分组——同源组
+Orthologous group1 ACTBL2
+Orthologous group2 ACTA1
+Orthologous group3 ACTC1
+Orthologous group4 ACTG2
+Orthologous group5 ACTA2
+Orthologous group6 ACTL8
+Orthologous group7 ACTL9 LOC468702_Ptr
+Orthologous group8 ACTL10 LOC100403536_Cja
+Orthologous group9 ACTR6 LOC452159_Ptr A6MKU0_Cja
+Orthologous group10 ACTR10
+Orthologous group11 ACTR3 LOC101144040_GGO
+Orthologous group12 ACTR8
+Orthologous group13 ACTL6B
+Orthologous group14 ACTL6A MMU.12425
+
+
+
 ```
 ## 三、识别假基因
+7个基因组中都大量存在死亡的肌动蛋白基因，这为肌动蛋白的进化过程提供了证据。
+
 假基因（Pseudogenes，Pseudo-意为“假”）是一类染色体上的基因片段。假基因的序列通常与对应的基因相似，但至少是丧失了一部分功能，如基因不能表达或编码的蛋白质没有功能。 #维基百科
 区分假基因和活基因有助于我们了解肌动蛋白基因家族的进化史
 编码一个基因的DNA序列在基因组内完整出现一次，称为该基因的一个拷贝。
@@ -395,6 +417,17 @@ blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-30 -qcov_hsp_perc 80 -p
 编码相同氨基酸的不同密码子被称为同义密码子，几乎在所有物种中不均等使用，呈现出基因的进化模式。
 RSCU相对同义密码子使用度。以某一个同义密码子的使用次数为分子，以该密码子预期出现的次数为分母。预测出现的次数为该密码子所编码的氨基酸的所有密码子平均使用的次数。 如果密码子使用没有偏好，则该密码子的RSCU值等于1，大于1表明其使用频率相对较高。
 
+使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214
+计算variation of RSCU
+
+终止密码子的表示方法一般用两种：“Ter”/“*”
+
+
+
+
+
+
+
 ## 五、 肌动蛋白基因表达模式
 计算肌动蛋白基因表达值的变异系数（CV；SD/mean）以估计表达模式。
 
@@ -409,5 +442,10 @@ actin gene members that displayed copy number variation with significantly highe
 
 
 总结：本篇文章拿到手大概两周之久，已了解文章中的技术和用途，具体细节有待钻研。2022.07.12开始阅读一些IV型胶原蛋白演化的文章，尤其关注Gxy重复，制定方案，预计本周末开始做IV型胶原蛋白演化分析。
+
+
+同源：
+Orthology：直系同源，描述在不同物种中来自共同祖先的基因。orthologous直系同源的基因可能有相同的功能，也可能没有。
+Paralogy：旁系同源，描述在同一物种内由于基因复制而分离的同源基因。
 
 
