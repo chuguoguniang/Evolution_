@@ -1,3 +1,4 @@
+#与文章分组不完全一样，但先暂以此熟悉后续流程。
 Group	name
 complex1	ENSMMUG00000054443.1_Mmu
 complex1	ENSCJAG00000007566.5|ACTR8_Cja
