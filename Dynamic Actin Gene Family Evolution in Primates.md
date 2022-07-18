@@ -385,7 +385,7 @@ Orthologous group11 ACTR3 LOC101144040_GGO
 Orthologous group12 ACTR8
 Orthologous group13 ACTL6B
 Orthologous group14 ACTL6A MMU.12425
-
+我的分组见Evolution_/Group_name.txt ,我的分组和文章中不完全一样，但先暂以此熟悉后续流程。
 
 
 ```
