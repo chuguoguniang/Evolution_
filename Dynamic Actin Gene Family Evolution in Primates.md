@@ -1,4 +1,4 @@
-# Dynamic Actin Gene Family Evolution in Primates
+# 重复文章——Dynamic Actin Gene Family Evolution in Primates
 
 
 ## 一、鉴定肌动蛋白基因
