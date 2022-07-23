@@ -25,10 +25,16 @@ White-tufted-ear marmoset (Callithrix jacchus)  #普通狨猴
 ```
 进入ensemble官网下选相应物种，每个基因暂取最长的转录本对应的蛋白序列和CDS序列，手动下载。（其实我想用命令行通过FTP下载再保留最长转录本再提取，但一时没想好怎么用命令行完成，暂且手动下载） 
 注：搜索Gorilla基因时Only searching Western Lowland Gorilla; 搜索Gibbon基因时Only searching Northern white-cheeked gibbon  
+为每个物种中的序列名添加后缀，规则是学名的三个字母，如人用Hsa作为后缀
+合并氨基酸序列：  
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> protein.all.fa ; done  
+ cat protein.all.fa | grep ">" | wc -l #42
 ```
 + 氨基酸序列多序列比对及建树
 ```
-
+使用muscle多序列比对，保存为mega格式 参数默认  
+NJ建树 参数默认 建出的树COL4A5确实与COL4A1挺近
 
 
 ```
