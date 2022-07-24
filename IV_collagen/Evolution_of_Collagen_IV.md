@@ -20,26 +20,54 @@ White-tufted-ear marmoset (Callithrix jacchus)  #普通狨猴
 在ensemble官网进入相应物种界面，搜索COL4,点击基因，去掉ncRNA、假基因、结合蛋白之类后，查看得：
 7个物种均有6个IV型胶原基因,:COL4A1 COL4A2 COL4A3 COL4A4 COL4A5 COL4A6
 ```
-## 2、多序列比对和建树
-+ 下载7个物种IV型胶原蛋白基因的氨基酸序列和CDS序列 
+## 2、多序列比对和建树（此步输入MEGA的文件是CRLF）
++ 下载、整理7个物种IV型胶原蛋白基因的氨基酸序列和CDS序列 
 ```
-进入ensemble官网下选相应物种，每个基因暂取最长的转录本对应的蛋白序列和CDS序列，手动下载。（其实我想用命令行通过FTP下载再保留最长转录本再提取，但一时没想好怎么用命令行完成，暂且手动下载） 
-注：搜索Gorilla基因时Only searching Western Lowland Gorilla; 搜索Gibbon基因时Only searching Northern white-cheeked gibbon  
-为每个物种中的序列名添加后缀，规则是学名的三个字母，如人用Hsa作为后缀
-合并氨基酸序列：  
+下载：进入ensemble官网下选相应物种，每个基因暂取最长的转录本对应的蛋白序列和CDS序列，手动下载。（其实我想用命令行通过FTP下载再保留最长转录本再提取，但一时没想好怎么用命令行完成，暂且手动下载） 
+注：下载过程中，搜索Gorilla基因时Only searching Western Lowland Gorilla; 搜索Gibbon基因时Only searching Northern white-cheeked gibbon  
+添加后缀：为每个物种中的序列名添加后缀，规则是学名的三个字母，如人用Hsa作为后缀;cds序列在后缀前加_cds用以与氨基酸序列区分
+合并序列：以合并7个物种氨基酸序列为例：  
 JOB=$(ls)
  for i in $JOB ; do cat $i >> protein.all.fa ; done  
- cat protein.all.fa | grep ">" | wc -l #42
+ cat protein.all.fa | grep ">" | wc -l #42  
 ```
-+ 氨基酸序列多序列比对及建树
++ 氨基酸与cds序列的多序列比对及建树
 ```
 使用muscle多序列比对，保存为mega格式 参数默认  
-NJ建树 参数默认 建出的树COL4A5确实与COL4A1挺近
-
-
+NJ建树 参数默认 建出的树COL4A5确实与COL4A1挺近 树的PDF文件见文件夹MEGA内的protein和cds文件夹
+氨基酸序列得到的Original Tree见下图：有个小疑问：氨基酸序列得到的Original Tree直接从MEGA导出时是两大分支，在iTOL是三个大分支，为什么？
 ```
+![Original Tree](./iRtOOle2jbw5HH18GvcYfA.svg)
++ 分组
+```
+很明显，可以分为6个直系同源组（每个物种的基因出现一次），没有complex组（一个物种的一个基因多拷贝或少于一个拷贝）.
+```
++ 计算PI和Ka Ks
+```
+计算ka ks（6个直系同源组，所以分6次计算，每次里分别算ka ks）  
+整理6个直系同源组的序列
+ cat cds.all.fa | grep "COL4A1" | cut -d ">" -f 2 >COL4A1.lst  
+ faops some cds.all.fa COL4A1.lst ./COL4A1/COL4A1.fa
+   
+cat cds.all.fa | grep "COL4A2" | cut -d ">" -f 2 >COL4A2.lst  
+ faops some cds.all.fa COL4A2.lst ./COL4A2/COL4A2.fa
 
+cat cds.all.fa | grep "COL4A3" | cut -d ">" -f 2 >COL4A3.lst  
+ faops some cds.all.fa COL4A3.lst ./COL4A3/COL4A3.fa
 
+cat cds.all.fa | grep "COL4A4" | cut -d ">" -f 2 >COL4A4.lst  
+ faops some cds.all.fa COL4A4.lst ./COL4A4/COL4A4.fa
+
+cat cds.all.fa | grep "COL4A5" | cut -d ">" -f 2 >COL4A5.lst  
+ faops some cds.all.fa COL4A5.lst ./COL4A5/COL4A5.fa
+
+cat cds.all.fa | grep "COL4A6" | cut -d ">" -f 2 >COL4A6.lst  
+ faops some cds.all.fa COL4A6.lst ./COL4A6/COL4A6.fa  
+ 多序列比对，使用MUSCLE 参数默认  
+ 使用MEGA计算Ka Ks，步骤见Dynamic Actin Gene Family Evolution in Primates.md  
+ 结果见Table1和supplement.table  
+ 疑问：文章Dynamic Actin Gene Family Evolution in Primates的Table1的ka/ks是怎么算出的，似乎不是附表里ka/ks的平均值。
+ 
 ```
 大概率不会有complex组，可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
 
