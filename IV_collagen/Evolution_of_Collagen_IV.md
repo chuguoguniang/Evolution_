@@ -93,7 +93,108 @@ complex groups), indicating that the actin genes code highly conserved proteins 
 ## 4、密码子使用情况
 使用在线网站使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214
 在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。
-将结果整理为tsv文件（全选在线网站解压出的excel的内容，粘贴到新建的的LF的tsv文件）
+将结果整理为tsv文件（全选在线网站解压出的excel的内容，粘贴到新建的的LF的tsv文件。之所以要用LF是因为tsv-filter对CRLF的文件会报错。注意在VSCode打开一个空tsv或只有一行的tsv，就算改成LF保存再打开仍是CRLF，但有两行文字时由CRLF改成LF保存再打开即为LF.）  
+对人六个IV型胶原蛋白基因的cds进行RSCU分析后，用在线软件生成热图，见图5.  
+![](./rscu_heatmap.png)  
+图5
+
+
++ 对数据进行预处理（删除终止密码子和ATG、TGG）
+```
+cd RSCU
+JOB=$(find ./ -maxdepth 2 -type f -name "*.tsv")
+for J in $JOB;do
+  echo -e "====> $J"
+  tsv-filter -H --str-ne Codon:UAA $J | 
+  tsv-filter -H --str-ne Codon:UAG | 
+  tsv-filter -H --str-ne Codon:UGA |
+  tsv-filter -H --str-ne Codon:AUG |
+  tsv-filter -H --str-ne Codon:UGG > tem&&
+  mv tem $J
+done
+```
++ 合并
+```
+cd within_groups/
+JOB=$(ls)
+tsv-select -H --fields Codon o1.tsv > merge.tsv
+for J in $JOB;do
+  echo -e "===> $J"
+  tsv-join --filter-file $J -H --key-fields Codon --append-fields RSCU merge.tsv > tem
+    mv tem merge.tsv
+done
+```
+```
+cd within_species/
+JOB=$(ls)
+tsv-select -H --fields Codon 0.tsv > merge.tsv
+for J in $JOB;do
+  echo -e "===> $J"
+  tsv-join --filter-file $J -H --key-fields Codon --append-fields RSCU merge.tsv > tem
+    mv tem merge.tsv
+done
+```
+ 
++ 计算方差
+但我不确定方差和肌动蛋白文章中说的variation不是一个意思。正在琢磨。暂时以方差进行计算和画图。
+```
+#利用datamash中的svar计算(brew install datamash)
+datamash --help
+
+# 查看矩阵
+head merge.tsv
+
+# 计算
+cat merge.tsv | datamash transpose | datamash --header-in --header-out svar 2-60 | datamash transpose > svar.tsv
+# transpose 转置
+# --header-in           first input line is column headers
+# --header-out          print column headers as first line
+```
++ R画图   
+within_groups和within_species分开作图以及合并为簇状条形图都在下方写了过程。展示的图6是簇状条形图。
+```
+#within_groups
+setwd("D:/0~GitHub/Evolution_/IV_collagen/RSCU/within_groups")
+group_svar <- read.table("svar_within_groups.tsv",header=FALSE,sep='\t')
+library(ggplot2)
+p <- ggplot(group_svar,aes(V1,V2))+geom_bar(stat = 'identity')+ylab("variance of RSCU within groups") +xlab("Codons")+ theme(panel.grid = element_blank())
+p
+
+#within_species
+setwd("D:/0~GitHub/Evolution_/IV_collagen/RSCU/within_species")
+species_svar <- read.table("svar_within_species.tsv",header=FALSE,sep='\t')
+library(ggplot2)
+p <- ggplot(species_svar,aes(V1,V2))+geom_bar(stat = 'identity')+ylab("variance of RSCU within species") +xlab("Codons")+ theme(panel.grid = element_blank())
+p
+```
+```
+画簇状条形图
+#整理数据
+cd R #进入新文件夹
+(echo -e "Codons\tvariance_of_RSCU_within_groups" && cat svar_within_groups.tsv) > tem&&
+    mv tem svar_within_groups.tsv # 添加表头 
+#手动创建cultivar.tsv
+paste cultivar.tsv svar_within_groups.tsv >svar_within_groups_paste.tsv #按列合并，也相当于增加新列
+
+(echo -e "Codons\tvariance_of_RSCU_within_species" && cat svar_within_species.tsv) > tem&&
+    mv tem svar_within_species.tsv # 添加表头 
+#手动创建cultivar.tsv
+paste cultivar.tsv svar_within_species.tsv >svar_within_species_paste.tsv
+
+#合并，按行追加 到RSCU目录
+cat svar_within_species_paste.tsv >> svar_within_groups_paste.tsv
+手动删中间表头
+mv svar_within_groups_paste.tsv svar_within_groups_species.tsv
+setwd("D:/0~GitHub/Evolution_/IV_collagen/RSCU")
+svar <- read.table("svar_within_groups_species.tsv",header=TRUE,sep='\t')
+library(ggplot2)
+ggplot(svar, aes(x = Codons, y = variance_of_RSCU_within_groups, fill = Cultivar)) +geom_bar(position = "dodge", stat = "identity")+ theme(panel.grid = element_blank())
+#见图6,可见物种间有相似的密码子使用模式，相比起来直系同源组间使用模式更多样化。
+```
+![图6](./RSCU/Figure1_variations_of_RSCU.jpeg)
+图6 variations of RSCU
+## 5、IV型胶原基因表达模式
+
 
 大概率不会有complex组，可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
 

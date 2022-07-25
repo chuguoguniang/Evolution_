@@ -1,0 +1,688 @@
+6
+        toolsDir       : /home/cloud/bicloud/handler/sh/organelle_tools/202205_rscu_heatmap/current 
+        InFile         : /share/nas6/cloud/data/data/10010499/2022-07-25/txt/0d188c6b723d63fea8eb52182cecb776.txt 
+        OutPutDir      : /share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192 
+ -> Start Run ... 
+ /share/nas6/zhouxy/biosoft/perl/current/bin/perl /home/cloud/bicloud/handler/sh/organelle_tools/202205_rscu_heatmap/current/bin/RSCU-heatmap.pl -i /share/nas6/cloud/data/data/10010499/2022-07-25/txt/0d188c6b723d63fea8eb52182cecb776.txt -o /share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+[ERROR] Transcoder - -null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+org.w3c.dom.DOMException: file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
+	at org.apache.batik.css.engine.CSSEngine.getCascadedStyleMap(Unknown Source)
+	at org.apache.batik.css.engine.CSSEngine.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.getComputedStyle(Unknown Source)
+	at org.apache.batik.bridge.CSSUtilities.convertDisplay(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildGraphicsNode(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.buildComposite(Unknown Source)
+	at org.apache.batik.bridge.GVTBuilder.build(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.XMLAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.transcode(Unknown Source)
+	at org.apache.batik.apps.rasterizer.SVGConverter.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.execute(Unknown Source)
+	at org.apache.batik.apps.rasterizer.Main.main(Unknown Source)
+ERROR: null
+Enclosed Exception:
+file:/share/nas6/cloud/data/result/tools/organelle_tools/RSCU-heatmap/10010499/2022-07-25/RSCU-heatmap3b7231259848192/./rscu_heatmap.xxx:
+The attribute "font-style" represents an invalid CSS value ("bold").
+Original message:
+The "bold" identifier is not a valid value for the "font-style" property. 
