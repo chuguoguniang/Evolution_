@@ -418,6 +418,7 @@ blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-30 -qcov_hsp_perc 80 -p
 RSCU相对同义密码子使用度。以某一个同义密码子的使用次数为分子，以该密码子预期出现的次数为分母。预测出现的次数为该密码子所编码的氨基酸的所有密码子平均使用的次数。 如果密码子使用没有偏好，则该密码子的RSCU值等于1，大于1表明其使用频率相对较高。
 
 使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214
+在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。
 计算variation of RSCU
 
 终止密码子的表示方法一般用两种：“Ter”/“*”

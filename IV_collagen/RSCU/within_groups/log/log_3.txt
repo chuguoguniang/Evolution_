@@ -1,0 +1,9 @@
+warn: COL4A1-201_cds_Pab start codon is wrong(ATG)
+warn: COL4A1-203_cds_Cja start codon is wrong(ATG)
+warn: COL4A1-201_cds_Ptr start codon is wrong(ATG)
+warn: COL4A1-201_cds_Mfa start codon is wrong(ATG)
+warn: COL4A1-201_cds_Nle start codon is wrong(ATG)
+warn: COL4A1-201_cds_Ggo start codon is wrong(ATG)
+warn: COL4A1-201_cds_Hsa start codon is wrong(ATG)
+
+Done. Total elapsed time : 0s

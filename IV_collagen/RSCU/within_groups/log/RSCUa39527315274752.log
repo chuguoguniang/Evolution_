@@ -1,0 +1,7 @@
+ 8 
+        toolsDir       : /home/cloud/bicloud/handler/sh/organelle_tools/rscu_for_cds/current 
+        InFile         : /share/nas6/cloud/data/data/10010499/2022-07-25/fa/179a3875474e5d4a947f491abeeaab67.fa 
+        OutPutDir      : /share/nas6/cloud/data/result/organelle_tools/rscu_for_cds/10010499/2022-07-25/RSCUa39527315274752 
+ -> Start Run ... 
+ /share/nas6/zhouxy/biosoft/perl/current/bin/perl /home/cloud/bicloud/handler/sh/organelle_tools/rscu_for_cds/current/bin/rscu_for_cds.pl -i /share/nas6/cloud/data/data/10010499/2022-07-25/fa/179a3875474e5d4a947f491abeeaab67.fa -t 1 -o /share/nas6/cloud/data/result/organelle_tools/rscu_for_cds/10010499/2022-07-25/RSCUa39527315274752 -s 0
+ -> Run End ... 

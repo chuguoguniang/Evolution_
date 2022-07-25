@@ -1,0 +1,8 @@
+warn: COL4A1-201 start codon is wrong(ATG)
+warn: COL4A2-201 start codon is wrong(ATG)
+warn: COL4A4-201 start codon is wrong(ATG)
+warn: COL4A6-202 start codon is wrong(ATG)
+warn: COL4A5-201 start codon is wrong(ATG)
+warn: COL4A3-201 start codon is wrong(ATG)
+
+Done. Total elapsed time : 0s
