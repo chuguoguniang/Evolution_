@@ -90,6 +90,20 @@ complex groups), indicating that the actin genes code highly conserved proteins 
 图4——Π导出为excel后看到的结果  
 
 ## 3、鉴定IV型胶原假基因
++ BLASTN
+```
+#将IV型胶原基因的核苷酸序列（暂以上步下载的CDS序列做）和对应物种基因组序列比较
+#chimpanzee
+makeblastdb -in ./Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa -dbtype nucl -parse_seqids -out ./index
+blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -qcov_hsp_perc 80 -perc_identity 35 -outfmt 6 -num_threads 4 -out out_file
+```
+#结果解读：输出格式选择 6 （--outfmt 6） ，默认输出为：qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore 。
+![BLASTN_format6](./BLASTN/BLASTN_format6.png)
+图 BLASTN_format6
+
+
+
+```
 ## 4、密码子使用情况
 使用在线网站使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214
 在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。
@@ -194,9 +208,47 @@ ggplot(svar, aes(x = Codons, y = variance_of_RSCU_within_groups, fill = Cultivar
 ![图6](./RSCU/Figure1_variations_of_RSCU.jpeg)
 图6 variations of RSCU
 ## 5、IV型胶原基因表达模式
+进入http://www.ebi.ac.uk/arrayexpress，搜索E-AFMX-11，下载文件 
+ A-AFFY-44.adf.txt为提供了探针的各种注释信息
+尝试提取表达值：
+安装affy包 BiocManager::install("affy")
+setwd("D:/0~GitHub/Evolution_/IV_collagen/EXPRESSION/")
+BiocManager::install("GEOquery")
+library(GEOquery)
+write.table(data.frame(fData(study),exprs(study)),file="expression.txt",row.names=FALSE,sep="\t") #提取表达值，但没有基因对应
+WYF师兄帮我整理了表达水平的文件，见expression.txt,该文件每行开头为基因名，每列最上是样本。
+出现的IV型胶原蛋白基因如下：即人和黑猩猩的6个IV型胶原基因都有检测到，并且不止一次，可能是不同探针。
+COL4A1
+COL4A1
+COL4A2
+COL4A2
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A4
+COL4A4
+COL4A4
+COL4A5
+COL4A5
+COL4A6
+COL4A6
+COL4A6
+
+55个样本，其实是两个物种分别5个组织：
+C代表黑猩猩，H代表人，B,H,K,L,T分别代表脑，心，肾，肝，睾丸。CB,CH,CK,CL,CT各5个；HB,HH,HK,HL,HT各6个。所以共计55个样本。
+
+因此求表达水平在不同组织中的平均值：
+见excel表expression.xlsx
+整理好的数据见Table2.Average expression level of collagen IV genes from human and chimpanzee genomes in all the five tissues.
 
 
-大概率不会有complex组，可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
+
+
+可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
 
 # 二、IV型胶原中G-X-Y的演化探究（在标准演化之外的特征演化方面）
 ## 旁系同源中GXY

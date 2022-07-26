@@ -7,7 +7,7 @@
 
 3. blastn使用和各个参数  
 blastn -help 而非blastn --help获得命令行参数的详细描述  
-也可参考网上介绍：https://max.book118.com/html/2020/1231/7061146031003036.shtm   
+也可参考网上介绍：https://max.book118.com/html/2020/1231/7061146031003036.shtm   (介绍中似乎有乱码)
 blastn -task blastn -evalue 1e-3 -num_threads 4 -num_descriptions 10 -num_alignments 10 -outfmt 0 \-dust yes -soft_masking true \ -db S288c.fa -query ../PARS10/sce_genes.fasta -out sce_genes.blast  
 -task <String, Permissible values: 'blastn' 'blastn-short' 'dc-megablast'
                 'megablast' 'rmblastn' >
