@@ -1,0 +1,11 @@
+Cultivar	Tissues	Average_CV_of_expression_levels
+within_groups	Brain	0.022581193
+within_groups	Heart	0.019574033
+within_groups	Kidney	0.02599316
+within_groups	Liver	0.019448758
+within_groups	Testis	0.047473727
+within_species	Brain	0.127059122
+within_species	Heart	0.272821542
+within_species	Kidney	0.233810589
+within_species	Liver	0.207313681
+within_species	Testis	0.193196057

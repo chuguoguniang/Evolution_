@@ -83,13 +83,16 @@ complex groups), indicating that the actin genes code highly conserved proteins 
 ```
 
 
-![](./MEGA/Π/计算Π时的参数.png)
+![](./MEGA/Π/计算Π时的参数.png)  
+图2
+
 ![](./MEGA/Π/MEGA上看到的Π结果.png)  
 图3——MEGA上看到的Π结果
 ![](./MEGA/Π/导出为excel后看到的结果.png)  
 图4——Π导出为excel后看到的结果  
 
 ## 3、鉴定IV型胶原假基因
+可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
 + BLASTN
 ```
 #将IV型胶原基因的核苷酸序列（暂以上步下载的CDS序列做）和对应物种基因组序列比较
@@ -103,10 +106,10 @@ blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -qcov_hsp_perc 80 -pe
 
 
 
-```
+
 ## 4、密码子使用情况
-使用在线网站使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214
-在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。
+使用在线网站使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214  
+在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。  
 将结果整理为tsv文件（全选在线网站解压出的excel的内容，粘贴到新建的的LF的tsv文件。之所以要用LF是因为tsv-filter对CRLF的文件会报错。注意在VSCode打开一个空tsv或只有一行的tsv，就算改成LF保存再打开仍是CRLF，但有两行文字时由CRLF改成LF保存再打开即为LF.）  
 对人六个IV型胶原蛋白基因的cds进行RSCU分析后，用在线软件生成热图，见图5.  
 ![](./rscu_heatmap.png)  
@@ -207,48 +210,68 @@ ggplot(svar, aes(x = Codons, y = variance_of_RSCU_within_groups, fill = Cultivar
 ```
 ![图6](./RSCU/Figure1_variations_of_RSCU.jpeg)
 图6 variations of RSCU
-## 5、IV型胶原基因表达模式
-进入http://www.ebi.ac.uk/arrayexpress，搜索E-AFMX-11，下载文件 
- A-AFFY-44.adf.txt为提供了探针的各种注释信息
-尝试提取表达值：
-安装affy包 BiocManager::install("affy")
-setwd("D:/0~GitHub/Evolution_/IV_collagen/EXPRESSION/")
-BiocManager::install("GEOquery")
-library(GEOquery)
-write.table(data.frame(fData(study),exprs(study)),file="expression.txt",row.names=FALSE,sep="\t") #提取表达值，但没有基因对应
-WYF师兄帮我整理了表达水平的文件，见expression.txt,该文件每行开头为基因名，每列最上是样本。
-出现的IV型胶原蛋白基因如下：即人和黑猩猩的6个IV型胶原基因都有检测到，并且不止一次，可能是不同探针。
-COL4A1
-COL4A1
-COL4A2
-COL4A2
-COL4A3
-COL4A3
-COL4A3
-COL4A3
-COL4A3
-COL4A3
-COL4A3
-COL4A4
-COL4A4
-COL4A4
-COL4A5
-COL4A5
-COL4A6
-COL4A6
-COL4A6
 
-55个样本，其实是两个物种分别5个组织：
+## 5、IV型胶原基因表达模式
+进入http://www.ebi.ac.uk/arrayexpress，搜索E-AFMX-11，下载文件 (后续可以找更新一点的表达量数据)  
+ A-AFFY-44.adf.txt为提供了探针的各种注释信息  
+尝试提取表达值：  
+安装affy包 BiocManager::install("affy")  
+setwd("D:/0~GitHub/Evolution_/IV_collagen/EXPRESSION/")  
+BiocManager::install("GEOquery")  
+library(GEOquery)  
+write.table(data.frame(fData(study),exprs(study)),file="expression.txt",row.names=FALSE,sep="\t") #提取表达值，但没有基因对应  
+
+WYF师兄帮我整理了表达水平的文件，见expression.txt,该文件每行开头为基因名，每列最上是样本。  
+出现的IV型胶原蛋白基因如下：
+COL4A1
+COL4A1
+COL4A2
+COL4A2
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A3
+COL4A4
+COL4A4
+COL4A4
+COL4A5
+COL4A5
+COL4A6
+COL4A6
+COL4A6  (即人和黑猩猩的6个IV型胶原基因都有检测到，并且不止一次，可能是不同探针。)
+
+55个样本，其实是两个物种分别5个组织：  
 C代表黑猩猩，H代表人，B,H,K,L,T分别代表脑，心，肾，肝，睾丸。CB,CH,CK,CL,CT各5个；HB,HH,HK,HL,HT各6个。所以共计55个样本。
 
 因此求表达水平在不同组织中的平均值：
-见excel表expression.xlsx
-整理好的数据见Table2.Average expression level of collagen IV genes from human and chimpanzee genomes in all the five tissues.
+见excel表expression.xlsx  
+
+整理好的数据见Table2.Average expression level of collagen IV genes from human and chimpanzee genomes in all the five tissues.  
+整理用于作图的Table3 The coefficient of variation of the expression level values for collagen IV genes within species and within different groups in all the five tissues. 因为只研究人和黑猩猩的基因表达水平，所以Table3中Orthologous1只包括人和黑猩猩的COL4A1，其它组同理。最终用于作图的数据见Table3的Sheet2，将其整理到tsv文件，见Evolution_/IV_collagen/EXPRESSION/Figure_data.tsv
+
+R中作簇状条形图：
+```
+setwd("D:/0~GitHub/Evolution_/IV_collagen/EXPRESSION/")
+expression <- read.table("Figure_data.tsv",header=TRUE,sep='\t')
+library(ggplot2)
+ggplot(expression, aes(x = Tissues, y = Average_CV_of_expression_levels, fill = Cultivar)) +geom_bar(position = "dodge", stat = "identity")+ theme(panel.grid = element_blank())
+```
+结果见图7
+![图7](./EXPRESSION/Figure.jpeg)  
+图7  
+结果表明，within_species在5个组织中平均CV均高于within_groups.表明物种内，比如人，六个基因执行不同功能，有不同的表达水平。而within_groups，比如Orthologous1里的来自人和黑猩猩的COL4A1，可能有相同的功能，平均CV较小。  
+
+
+注：标准差可缩写为SD，在数学文本和方程中最常用小写希腊字母σ (sigma)表示总体标准差，或拉丁字母s表示样本标准差。——维基百科。注意计算CV(SD/mean)，在EXCEL中STDEV和AVERAGE使用时两个number之间以逗号连接而非加号。
 
 
 
 
-可能找不到假基因。假若有假基因，由假基因推核苷酸内秉突变率。
+
+
 
 # 二、IV型胶原中G-X-Y的演化探究（在标准演化之外的特征演化方面）
 ## 旁系同源中GXY
