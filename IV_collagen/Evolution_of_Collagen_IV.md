@@ -296,7 +296,7 @@ MEGA对多序列比对完的序列建树，NJ法
 根据InterProScan查看Collagen repeat  
 COL4A5：57始-1460末 22个中断 4个G1G 7个G4G
 COL4A1: 46始-1440末 21个中断 7个G1G 5个G4G
-COL4A2: 61始-1336末
+COL4A2: 61始-1336末 
 COL4A3: 46始-1437末
 COL4A4: 62始-1370末
 COL4A6: 46始-1478末
