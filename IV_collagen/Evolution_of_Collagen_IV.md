@@ -98,12 +98,18 @@ complex groups), indicating that the actin genes code highly conserved proteins 
 #将IV型胶原基因的核苷酸序列（暂以上步下载的CDS序列做）和对应物种基因组序列比较
 #chimpanzee
 makeblastdb -in ./Pan_troglodytes.Pan_tro_3.0.dna.toplevel.fa -dbtype nucl -parse_seqids -out ./index
-blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -qcov_hsp_perc 80 -perc_identity 35 -outfmt 6 -num_threads 4 -out out_file
+blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -outfmt 6 -num_threads 4 -out out_file1
 ```
 #结果解读：输出格式选择 6 （--outfmt 6） ，默认输出为：qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore 。
 ![BLASTN_format6](./BLASTN/BLASTN_format6.png)
-图 BLASTN_format6
+图5 BLASTN_format6  
+  
+(echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" && cat out_file1) > tem&&
+    mv tem out_file1 # 添加表头   
 
+不太清楚怎么从结果中去除已知的胶原蛋白基因。  
+
+换另一种输出格式：blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -outfmt 0 -num_threads 4 -out out_file2
 
 
 
@@ -111,9 +117,9 @@ blastn -query ./chimpanzee.cds.fa -db ./index -evalue 1e-5 -qcov_hsp_perc 80 -pe
 使用在线网站使用在线网站计算RSCU，网址：http://cloud.genepioneer.com:9929/#/tool/alltool/detail/214  
 在线网站返回的结果log.txt里显示 start codon is wrong(ATG)，但由于后续会把起始密码子删去，所以暂不认为此错误有影响。  
 将结果整理为tsv文件（全选在线网站解压出的excel的内容，粘贴到新建的的LF的tsv文件。之所以要用LF是因为tsv-filter对CRLF的文件会报错。注意在VSCode打开一个空tsv或只有一行的tsv，就算改成LF保存再打开仍是CRLF，但有两行文字时由CRLF改成LF保存再打开即为LF.）  
-对人六个IV型胶原蛋白基因的cds进行RSCU分析后，用在线软件生成热图，见图5.  
+对人六个IV型胶原蛋白基因的cds进行RSCU分析后，用在线软件生成热图，见图6.  
 ![](./rscu_heatmap.png)  
-图5
+图6
 
 
 + 对数据进行预处理（删除终止密码子和ATG、TGG）
@@ -206,10 +212,10 @@ setwd("D:/0~GitHub/Evolution_/IV_collagen/RSCU")
 svar <- read.table("svar_within_groups_species.tsv",header=TRUE,sep='\t')
 library(ggplot2)
 ggplot(svar, aes(x = Codons, y = variance_of_RSCU_within_groups, fill = Cultivar)) +geom_bar(position = "dodge", stat = "identity")+ theme(panel.grid = element_blank())
-#见图6,可见物种间有相似的密码子使用模式，相比起来直系同源组间使用模式更多样化。
+#见图7,可见物种间有相似的密码子使用模式，相比起来直系同源组间使用模式更多样化。
 ```
-![图6](./RSCU/Figure1_variations_of_RSCU.jpeg)
-图6 variations of RSCU
+![图7](./RSCU/Figure1_variations_of_RSCU.jpeg)
+图7 variations of RSCU
 
 ## 5、IV型胶原基因表达模式
 进入http://www.ebi.ac.uk/arrayexpress，搜索E-AFMX-11，下载文件 (后续可以找更新一点的表达量数据)  
@@ -259,9 +265,9 @@ expression <- read.table("Figure_data.tsv",header=TRUE,sep='\t')
 library(ggplot2)
 ggplot(expression, aes(x = Tissues, y = Average_CV_of_expression_levels, fill = Cultivar)) +geom_bar(position = "dodge", stat = "identity")+ theme(panel.grid = element_blank())
 ```
-结果见图7
-![图7](./EXPRESSION/Figure.jpeg)  
-图7  
+结果见图8
+![图8](./EXPRESSION/Figure.jpeg)  
+图8  
 结果表明，within_species在5个组织中平均CV均高于within_groups.表明物种内，比如人，六个基因执行不同功能，有不同的表达水平。而within_groups，比如Orthologous1里的来自人和黑猩猩的COL4A1，可能有相同的功能，平均CV较小。  
 
 
@@ -275,10 +281,41 @@ ggplot(expression, aes(x = Tissues, y = Average_CV_of_expression_levels, fill = 
 
 # 二、IV型胶原中G-X-Y的演化探究（在标准演化之外的特征演化方面）
 ## 旁系同源中GXY
-将人的6个IV型胶原基因的氨基酸序列和核苷酸序列进行多序列比对后建树，查看进化关系。
-查看每个基因中的中断，看哪些较为古老，哪些较为新出。将CLO4A5基因出现的中断分类：一些COL4A5独有的、在6个基因中部分有、在6个基因中都有的（此类较为保守）
++ 查看进化关系  
+```
+将人的6个IV型胶原基因的氨基酸序列和核苷酸序列进行多序列比对后建树，查看进化关系。  
+其实第一部分标准演化的多序列中已经包含了这部分，在此只是单独做人的。  
+将IV_collagen/sequence/下人6个基因的cds和protein复制到IV_collagen/PART2_GXY/Paralogs_GXY  
+MEGA进行多序列比对，选muscel，参数默认  
+MEGA对多序列比对完的序列建树，NJ法   
+结果与第一部分标准演化没有大的区别。输出的pdf文件所在目录为Evolution_/IV_collagen/PART2_GXY/Paralogs_GXY 
+```
+
++ 查看每个基因GXY repeat 中的的中断
+```
+根据InterProScan查看Collagen repeat  
+COL4A5：57始-1460末 22个中断 4个G1G 7个G4G
+COL4A1: 46始-1440末 21个中断 7个G1G 5个G4G
+COL4A2: 61始-1336末
+COL4A3: 46始-1437末
+COL4A4: 62始-1370末
+COL4A6: 46始-1478末
+始和末之间并不是一直连续。
+
+手动标注中断中
+
+在手动标注中断的时候发现，有些GXY中的XY也有G，这些或许可以和1号位G对比研究？  
+InterPro上说重复的第一个位置是甘氨酸，第二个和第三个位置可以是任何残基但通常是脯氨酸和羟脯氨酸。
+中断看哪些较为古老，哪些较为新出。将CLO4A5基因出现的中断分类：一些COL4A5独有的、在6个基因中部分有、在6个基因中都有的（此类较为保守）
+
+
+```
 ## 直系同源中GXY
 用统计分析部分所选的6个等级30个物种（灵长目到北方兽类）的COL4A5基因的氨基酸序列多序列比对，比较中断。将人科作为参照，看哪些中断是古老是哪些是新的（人有而其它物种没有的可能是新的，人有而其它物种有的可能是老的），人不中断其它物种中断的位置可能不重要，因为允许在其它物种中中断。
 中断的长度和位置也需要考虑，因为The location of interruptions is often similar for the three chains within a heterotrimer, while there may be different lengths of the interruptions at a given site in each of the three chains.[Thiagarajan G, Li Y, Mohs A, et al. Common interruptions in the repeating tripeptide sequence of non-fibrillar collagens: sequence analysis and structural studies on triple-helix peptide models. J Mol Biol. 2008;376(3):736-748. doi:10.1016/j.jmb.2007.11.075]
 
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
+
+
+
+
