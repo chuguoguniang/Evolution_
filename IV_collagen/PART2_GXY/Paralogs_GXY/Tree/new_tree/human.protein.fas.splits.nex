@@ -1,0 +1,33 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=6;
+TAXLABELS
+[1] 'COL4A2-201'
+[2] 'COL4A1-201'
+[3] 'COL4A3-202'
+[4] 'COL4A4-201'
+[5] 'COL4A5-201'
+[6] 'COL4A6-203'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=6 nsplits=12;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 5,
+	79	 2 5,
+	100	 3,
+	100	 1 4 6,
+	100	 4,
+	90	 1 6,
+	100	 6,
+	100	 1,
+	21	 3 5,
+	10	 1 4,
+	0	 2 3,
+;
+END; [Splits]
+

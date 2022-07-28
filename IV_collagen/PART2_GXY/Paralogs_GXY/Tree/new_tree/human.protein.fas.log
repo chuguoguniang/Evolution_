@@ -1,0 +1,128 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Jul 19 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    DESKTOP-7C0QOT1 (AVX2, FMA3, 6 GB RAM)
+Command: iqtree -s human.protein.fas -m mtREV+F+I+G4 -bb 1000 -nt AUTO
+Seed:    551311 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Jul 28 12:35:28 2022
+Kernel:  AVX+FMA - auto-detect threads (4 CPU cores detected)
+
+Reading alignment file human.protein.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 6 sequences with 1819 columns, 1218 distinct patterns
+354 parsimony-informative, 816 singleton sites, 649 constant sites
+            Gap/Ambiguity  Composition  p-value
+   1  COL4A2-201    5.88%    failed      1.63%
+   2  COL4A1-201    8.25%    passed     73.81%
+   3  COL4A3-202    8.19%    passed     78.57%
+   4  COL4A4-201    7.09%    failed      1.05%
+   5  COL4A5-201    7.04%    failed      0.01%
+   6  COL4A6-203    6.16%    failed      4.98%
+****  TOTAL         7.10%  4 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 551311)...
+
+NOTE: 9 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 4 CPU cores
+Increase to 10 rounds for branch lengths
+53 trees examined
+Threads: 1 / Time: 4.069 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -18671
+Threads: 2 / Time: 2.479 sec / Speedup: 1.641 / Efficiency: 82% / LogL: -18671
+Threads: 3 / Time: 2.494 sec / Speedup: 1.631 / Efficiency: 54% / LogL: -18671
+Threads: 4 / Time: 2.044 sec / Speedup: 1.991 / Efficiency: 50% / LogL: -18671
+BEST NUMBER OF THREADS: 2
+
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.000 / Estimate: 0.000, 0.879 / LogL: -18648.858
+Init pinv, alpha: 0.040, 1.000 / Estimate: 0.107, 1.443 / LogL: -18633.959
+Init pinv, alpha: 0.079, 1.000 / Estimate: 0.107, 1.444 / LogL: -18633.956
+Init pinv, alpha: 0.119, 1.000 / Estimate: 0.119, 1.517 / LogL: -18633.757
+Init pinv, alpha: 0.159, 1.000 / Estimate: 0.127, 1.565 / LogL: -18633.891
+Init pinv, alpha: 0.198, 1.000 / Estimate: 0.127, 1.563 / LogL: -18633.882
+Init pinv, alpha: 0.238, 1.000 / Estimate: 0.126, 1.562 / LogL: -18633.874
+Init pinv, alpha: 0.278, 1.000 / Estimate: 0.127, 1.568 / LogL: -18633.905
+Init pinv, alpha: 0.317, 1.000 / Estimate: 0.126, 1.560 / LogL: -18633.865
+Init pinv, alpha: 0.357, 1.000 / Estimate: 0.126, 1.562 / LogL: -18633.876
+Optimal pinv,alpha: 0.119, 1.517 / LogL: -18633.757
+
+Parameters optimization took 2.540 sec
+Computing ML distances based on estimated model parameters... 0.014 sec
+Computing BIONJ tree...
+0.013 seconds
+Log-likelihood of BIONJ tree: -18633.757
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.062 second
+Computing log-likelihood of 6 initial trees ... 0.086 seconds
+Current best score: -18633.757
+
+Do NNI search on 7 best initial trees
+Finish initializing candidate tree set (7)
+Current best tree score: -18633.757 / CPU time: 0.618
+Number of iterations: 7
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 10 / LogL: -18633.771 / Time: 0h:0m:14s
+UPDATE BEST LOG-LIKELIHOOD: -18633.757
+UPDATE BEST LOG-LIKELIHOOD: -18633.757
+Iteration 20 / LogL: -18633.771 / Time: 0h:0m:15s
+UPDATE BEST LOG-LIKELIHOOD: -18633.757
+UPDATE BEST LOG-LIKELIHOOD: -18633.757
+Iteration 30 / LogL: -18633.888 / Time: 0h:0m:16s (0h:0m:38s left)
+UPDATE BEST LOG-LIKELIHOOD: -18633.757
+Iteration 40 / LogL: -18639.161 / Time: 0h:0m:16s (0h:0m:25s left)
+Iteration 50 / LogL: -18633.771 / Time: 0h:0m:17s (0h:0m:17s left)
+Log-likelihood cutoff on original alignment: -18654.482
+Iteration 60 / LogL: -18633.810 / Time: 0h:0m:18s (0h:0m:12s left)
+Iteration 70 / LogL: -18633.837 / Time: 0h:0m:18s (0h:0m:8s left)
+Iteration 80 / LogL: -18633.761 / Time: 0h:0m:19s (0h:0m:4s left)
+Iteration 90 / LogL: -18633.771 / Time: 0h:0m:20s (0h:0m:2s left)
+Iteration 100 / LogL: -18633.757 / Time: 0h:0m:20s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -18654.482
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:21s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -18633.757
+Optimal log-likelihood: -18633.756
+Proportion of invariable sites: 0.119
+Gamma shape alpha: 1.516
+Parameters optimization took 1 rounds (0.035 sec)
+BEST SCORE FOUND : -18633.756
+Creating bootstrap support values...
+Split supports printed to NEXUS file human.protein.fas.splits.nex
+Total tree length: 4.499
+
+Total number of iterations: 101
+CPU time used for tree search: 14.070 sec (0h:0m:14s)
+Wall-clock time used for tree search: 7.249 sec (0h:0m:7s)
+Total CPU time used: 43.934 sec (0h:0m:43s)
+Total wall-clock time used: 21.067 sec (0h:0m:21s)
+
+Computing bootstrap consensus tree...
+Reading input file human.protein.fas.splits.nex...
+6 taxa and 12 splits.
+Consensus tree written to human.protein.fas.contree
+Reading input trees file human.protein.fas.contree
+Log-likelihood of consensus tree: -18633.756
+
+Analysis results written to: 
+  IQ-TREE report:                human.protein.fas.iqtree
+  Maximum-likelihood tree:       human.protein.fas.treefile
+  Likelihood distances:          human.protein.fas.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          human.protein.fas.splits.nex
+  Consensus tree:                human.protein.fas.contree
+  Screen log file:               human.protein.fas.log
+
+Date and Time: Thu Jul 28 12:35:49 2022
