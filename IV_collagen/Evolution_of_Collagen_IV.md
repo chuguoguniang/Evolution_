@@ -310,7 +310,11 @@ InterPro上说重复的第一个位置是甘氨酸，第二个和第三个位置
 + 比较中断
 ```
 对6个基因的氨基酸序列使用MEGA的muscel多序列比对  
-因为在MEGA看比对完的结果不太方便，也不好做标记，所以导出到EXCEL分析。以COL4A5为参照，其中22个中断有13个（8到20）内是无gap-的，12个有-，说明这12个不是保守的中断。
+因为在MEGA看比对完的结果不太方便，也不好做标记，所以导出到EXCEL分析。以COL4A5为参照，其中22个中断有14个（2，8到20）内是无gap-的，12个有-（1，3，4，5，6，7，21，22），说明这12个不是保守的中断。  
+COL4A1的第11个中断在六个基因中位置一模一样都是G1G!
+比较的结果见IV_collagen/PART2_GXY/Paralogs_GXY/interruption/下的interruption_after_alligned.xlsx的sheet3，截图结果见IV_collagen/PART2_GXY/Paralogs_GXY/interruption/下的word文件'人6个IV型胶原基因的中断比较.docx'
+
+中断似乎有很多种分类情况，比如有无gap，包含与否等，所以具体如何判断古老和新出的中断呢？
 中断看哪些较为古老，哪些较为新出。将CLO4A5基因出现的中断分类：一些COL4A5独有的、在6个基因中部分有、在6个基因中都有的（此类较为保守）
 
 
