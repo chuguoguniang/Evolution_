@@ -313,6 +313,16 @@ InterPro上说重复的第一个位置是甘氨酸，第二个和第三个位置
 ## 直系同源中GXY
 用统计分析部分所选的6个等级30个物种（灵长目到北方兽类）的COL4A5基因的氨基酸序列多序列比对，比较中断。将人科作为参照，看哪些中断是古老是哪些是新的（人有而其它物种没有的可能是新的，人有而其它物种有的可能是老的），人不中断其它物种中断的位置可能不重要，因为允许在其它物种中中断。
 中断的长度和位置也需要考虑，因为The location of interruptions is often similar for the three chains within a heterotrimer, while there may be different lengths of the interruptions at a given site in each of the three chains.[Thiagarajan G, Li Y, Mohs A, et al. Common interruptions in the repeating tripeptide sequence of non-fibrillar collagens: sequence analysis and structural studies on triple-helix peptide models. J Mol Biol. 2008;376(3):736-748. doi:10.1016/j.jmb.2007.11.075]
++ 人科
+```
+人COL4A5的22个中断均保守，且在其它4个物种中均一样且保守(只是有的中断长度、位置一样但内部氨基酸不一样)。  
+另外，有一个物种出现了一个人中没有的中断，对应的人氨基酸位点是1283-1287，说明这个位置可能不重要，因为允许在其它物种中断。
+```
++ 狭鼻下目
+```
+人COL4A5的22个中断均保守，且在其它物种中位置均一样（当然除去中断位置对应为-的物种），其中中断3，5，6，8，14在其它物种中与人氨基酸序列有的不同。  
+一个物种出现了人没有的一个中断，对应人氨基酸序列位点1283-1287，说明这个位置可能不重要，因为允许在其它物种中断。
+```
 
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
 
