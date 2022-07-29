@@ -293,19 +293,28 @@ MEGA对多序列比对完的序列建树，NJ法
 
 + 查看每个基因GXY repeat 中的的中断
 ```
-根据InterProScan查看Collagen repeat  
+Collagen repeat的范围来自于InterProScan
 COL4A5：57始-1460末 22个中断 4个G1G 7个G4G
 COL4A1: 46始-1440末 21个中断 7个G1G 5个G4G
-COL4A2: 61始-1336末 
+COL4A2: 61始-1336末 23个中断 3个G1G 2个G4G 根据InterProScan查看Collagen repeat,与某篇文章报道的27个中断不同,我又往后延了一段GXY,与文献一样了。
 COL4A3: 46始-1437末 23个中断 2个G1G 7个G4G
-COL4A4: 62始-1370末 24个中断 3个G1G 5个G4G  根据InterProScan查看Collagen repeat,与某篇文章报道的27个中断不同,我又往后延了一段GXY，与文献一样了。其实repeat结束位置后面很长才有零星GXY出现。再核对COL4A4最后一个中断的判断。
+COL4A4: 62始-1370末 27个中断 4个G1G 5个G4G  根据InterProScan查看Collagen repeat,与某篇文章报道的27个中断不同,我又往后延了一段GXY，与文献一样了。其实repeat结束位置后面很长才有零星GXY出现。
 COL4A6: 46始-1478末 25个中断 4个G1G 2个G4G
 始和末之间并不是一直连续。
 
-手动标注中断中
+使用SnapGene Viewer 标注氨基酸序列的中断，保存为IV_collagen/PART2_GXY/Paralogs_GXY/interruption下的.prot
 
 在手动标注中断的时候发现，有些GXY中的XY也有G，这些或许可以和1号位G对比研究？  
 InterPro上说重复的第一个位置是甘氨酸，第二个和第三个位置可以是任何残基但通常是脯氨酸和羟脯氨酸。
+```
++ 比较中断
+```
+对6个基因的氨基酸序列使用MEGA的muscel多序列比对  
+因为在MEGA看比对完的结果不太方便，也不好做标记，所以导出到EXCEL分析。以COL4A5为参照，其中22个中断有14个（2，8到20）内是无gap-的，12个有-（1，3，4，5，6，7，21，22），说明这12个不是保守的中断。  
+COL4A1的第11个中断在六个基因中位置一模一样都是G1G!
+比较的结果见IV_collagen/PART2_GXY/Paralogs_GXY/interruption/下的interruption_after_alligned.xlsx的sheet3，截图结果见IV_collagen/PART2_GXY/Paralogs_GXY/interruption/下的word文件'人6个IV型胶原基因的中断比较.docx'
+
+中断似乎有很多种分类情况，比如有无gap，包含与否等，所以具体如何判断古老和新出的中断呢？
 中断看哪些较为古老，哪些较为新出。将CLO4A5基因出现的中断分类：一些COL4A5独有的、在6个基因中部分有、在6个基因中都有的（此类较为保守）
 
 
