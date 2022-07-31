@@ -379,7 +379,30 @@ COL4A1的第11个中断在六个基因中位置一模一样都是G1G!
 ********************************************************
 
 用统计分析部分所选的6个等级31个物种（人科到北方兽类）的COL4A3基因的氨基酸序列多序列比对，比较中断。将人科作为参照，其它物种只考虑比对后人46-1437 Repeat区覆盖范围的中断。  
-下载31个物种COL4A3基因的最长转录本对应氨基酸序列
+下载31个物种COL4A3基因的最长转录本对应氨基酸序列  
+注：原先第31个物种为Pig，现为Pig-Duroc  
+合并为一个文件,在6个文件夹中分别运行如下命令
+```
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> renke.fa ; done  
+
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> xiabixiamu.fa ; done 
+
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> jianbiyamu.fa ; done 
+
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> lingzhangmu.fa ; done 
+
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> lingzhangzongmu.fa ; done 
+
+JOB=$(ls)
+ for i in $JOB ; do cat $i >> beifangshoulei.fa ; done 
+
+```
+使用MEGA的muscle进行多序列比对
 
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
 
