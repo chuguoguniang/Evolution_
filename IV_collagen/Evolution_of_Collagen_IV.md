@@ -550,7 +550,10 @@ JOB=$(ls)
 ```  
 思考：COL4A4多序列比对后的结果还是很好看的，为什么COL4A3的中断比较那么复杂？  
 总结：纵观COL4A3 COL4A4 COL4A5三个基因在人科中的中断比较，发现COL4A3情况最复杂  
-下一步还是把COL4A4其它等级的做了，没有COL4A5所选物种的换相应等级下的其它物种填充，备注好。
+下一步还是把COL4A4其它等级的做了，没有COL4A5所选物种的换相应等级下的其它物种填充，备注好。  
+Sheep的collagen type IV alpha 4 chain对应基因为ENSOARG00000020503  
+第31个物种在COL4A5当时是Pig，在此下载的COL4A4是Pig—Duroc  
+第12个物种Olive baboon换成同为狭鼻下目的Sooty mangabey
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
 
 
