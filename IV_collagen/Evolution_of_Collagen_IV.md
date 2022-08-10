@@ -729,6 +729,65 @@ Sheep的collagen type IV alpha 4 chain对应基因为ENSOARG00000020503
 ```  
 注意：某列全是-有三种情况：（1）该物种还没开始比对上；（2）该物种上下未中断；（3）该物种上下中断。在COL4A3 COL4A4 COL4A5三个基因不同物种间比较中断时，其实并没完全统一，前面统计有除去中断被-覆盖的物种。  
 至此，COL4A3 COL4A4 COL4A5三个基因在31个物种中GXY中断已比较完毕。总体来看，COL4A5中断比较起来相对简单，新中断情况比较少。
+
+
+
+## AF与中断  
+将氨基酸位置分为三个档次，即：中断内；near中断（中断位置±5氨基酸并且除去中断内）；远离中断（非中断内及中断±5氨基酸）。探索AF与中断位置是否有关联  
+命令行下载1000genomes数据作为我的1个群体
+```
+#命令行下载1000genomes中COL4A5基因的信息：
+tabix -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chrX.phase3_shapeit2_mvncall_integrated_v1c.20130502.genotypes.vcf.gz X:107683074-107940775 >col4a5.tsv
+#提取snp：
+bcftools view -v snps col4a5.tsv >col4a5.snp.vcf
+#处理为唯一标识符：
+ cat col4a5.snp.vcf | perl -e' while(<>){
+if (/\s(\d*)\s\.\s([A-Z])\s([A-Z])\s/) {
+ print "X:$1:$2:$3\n";
+ }
+}' > col4a5.identifer.tsv
+#整理为vep输入格式以得到氨基酸位置：
+cat col4a5.identifer.tsv| perl -e ' while(<>){
+    chomp($_);
+    if (/X:(\d*):([A-Z]):([A-Z])/) {
+        print "X\t$1\t$1\t$2/$3\t+\n"
+    }
+}'   > format.tsv
+#下载vep结果（COL4A5基因和最长转录本）
+#将第一列转为唯一标识符：
+HEAD=$(head -n 1 vep.tsv) 
+sed -i '1d' vep.tsv
+sed -i 's/_/:/1' vep.tsv
+sed -i 's/_/:/1' vep.tsv
+sed -i 's/\//:/1' vep.tsv
+(echo $HEAD | tr " " "\t" && cat vep.tsv) > tem&&
+    mv tem vep.tsv
+#提取需要的信息：
+tsv-select -H -f  Protein_position,#Uploaded_variation,AF  vep.tsv >vep.position.af.tsv #此处的AF使用VEP的AF，生成VEP前选的是默认的1000 Genomes global minor allele frequency ,但鼠标在vep结果的AF处停留看到的是Frequency of existing variant in 1000Genomes combined population,所以是次等位基因频率吗？
+tsv-filter -H  --str-ne Protein_position:- vep.position.af.tsv > vep.position.af.1.tsv
+tsv-select -f 2,1,3 vep.position.af.1.tsv>vep.position.af.2.tsv
+tsv-filter -H  --str-ne Protein_position:- vep.position.af.tsv | wc -l #79 说明1000genomes有效数据（变异有氨基酸位置的）为78个点
+```
+统计78-11=67个Repeat中点的信息：
+| 类型 | 氨基酸数 | 核苷酸数 | 出现AF数 
+| ---- | ---- | ---- | ---- | 
+| 中断内 |  9   |      |   9   |  
+|near 中断| 12    |      |   12   | 
+|远离中断|  46   |       |  46    |  
+|
+频率分布见如下三张图：
+![](./PART2_GXY/interruption_AF/%E4%B8%AD%E6%96%AD%E5%86%85.png)
+![](./PART2_GXY/interruption_AF/near%E4%B8%AD%E6%96%AD.png)
+![](./PART2_GXY/interruption_AF/%E8%BF%9C%E7%A6%BB%E4%B8%AD%E6%96%AD.png)
+
+
+
+ 
+
+## GXY的重要性  
+根据文献（DOI: 10.1038/srep37831）报道Gly residues in the amino and carboxy termini, the interruptions, and positions 2 and 3 in the Gly-Xaa-Yaa repeats  are not considered critical，对甘氨酸残基进行标注，将GXY repeat中1号位置的G标为1，其余的G标为0
+
+
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
 
 
