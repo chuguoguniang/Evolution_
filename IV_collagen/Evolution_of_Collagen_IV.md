@@ -732,7 +732,8 @@ Sheep的collagen type IV alpha 4 chain对应基因为ENSOARG00000020503
 
 
 
-## AF与中断  
+## AF与中断   
+### 第一个群体1000Genomes 
 将氨基酸位置分为三个档次，即：中断内；near中断（中断位置±5氨基酸并且除去中断内）；远离中断（非中断内及中断±5氨基酸）。探索AF与中断位置是否有关联  
 命令行下载1000genomes数据作为我的1个群体
 ```
@@ -776,9 +777,63 @@ tsv-filter -H  --str-ne Protein_position:- vep.position.af.tsv | wc -l #79 说�
 |远离中断|  46   |       |  46    |  
 |
 频率分布见如下三张图：
-![](./PART2_GXY/interruption_AF/%E4%B8%AD%E6%96%AD%E5%86%85.png)
-![](./PART2_GXY/interruption_AF/near%E4%B8%AD%E6%96%AD.png)
-![](./PART2_GXY/interruption_AF/%E8%BF%9C%E7%A6%BB%E4%B8%AD%E6%96%AD.png)
+![](./PART2_GXY/interruption_AF/Population1_1000Genomes/%E4%B8%AD%E6%96%AD%E5%86%85.png)
+![](./PART2_GXY/interruption_AF/Population1_1000Genomes/near%E4%B8%AD%E6%96%AD.png)
+![](./PART2_GXY/interruption_AF/Population1_1000Genomes/%E8%BF%9C%E7%A6%BB%E4%B8%AD%E6%96%AD.png)
+
+### 第二个群体TOPMED
+得到TOPMED中COL4A5的SNV共41632个。
+```
+#提取唯一标识符列并整理为vep上传格式以得到变异的氨基酸位置
+cat TOPMED.SNV.tsv | cut -f 1 >topmed_identifier.tsv
+cat topmed_identifier.tsv| perl -e ' while(<>){
+ chomp($_);
+ if (/X-(\d*)-([A-Z])-([A-Z])/) {
+ print "X\t$1\t$1\t$2/$3\t+\n"
+  }
+ }'   > format.tsv
+
+#下载vep结果（COL4A5基因和最长转录本）
+#将第一列转为唯一标识符：
+HEAD=$(head -n 1 vep.tsv) 
+sed -i '1d' vep.tsv
+sed -i 's/_/:/1' vep.tsv
+sed -i 's/_/:/1' vep.tsv
+sed -i 's/\//:/1' vep.tsv
+(echo $HEAD | tr " " "\t" && cat vep.tsv) > tem&&
+    mv tem vep.tsv
+
+#提取需要的信息：
+tsv-select -H -f  Protein_position,#Uploaded_variation  vep.tsv >vep.position.tsv
+tsv-filter -H  --str-ne Protein_position:- vep.position.tsv > vep.position.1.tsv
+tsv-select -f 2,1 vep.position.1.tsv>vep.position.2.tsv
+tsv-filter -H  --str-ne Protein_position:- vep.position.tsv | wc -l #654 说明topmed有效数据（变异有氨基酸位置的）为653个点
+
+#将frequency提取出来：
+cat TOPMED.SNV.tsv | cut -f 1,11 >frequency.tsv
+#整理第一列为唯一标识符：（列名手动改为#Uploaded_variation）  
+HEAD=$(head -n 1 frequency.tsv) 
+sed -i '1d' frequency.tsv
+sed -i 's/-/:/1' frequency.tsv
+sed -i 's/-/:/1' frequency.tsv
+sed -i 's/-/:/1' frequency.tsv
+(echo $HEAD | tr " " "\t" && cat frequency.tsv) > tem&&
+    mv tem frequency.tsv
+
+#向vep.position.2.tsv添加topmed的frequency:
+tsv-join --filter-file frequency.tsv --H --key-fields 1 --append-fields Frequency vep.position.2.tsv > tem&&
+mv tem vep.position.2.tsv
+```
+统计653-117=536个Repeat中点的信息：
+| 类型 | 氨基酸数 | 核苷酸数 | 出现AF数 
+| ---- | ---- | ---- | ---- | 
+| 中断内 | 59    |      |  59    |  
+|near 中断|  73   |      |  73    | 
+|远离中断|  404   |       |  404    | 
+|频率分布见如下三张图：
+![](./PART2_GXY/interruption_AF/Population2_topmed/%E4%B8%AD%E6%96%AD%E5%86%85.jpg)
+![](./PART2_GXY/interruption_AF/Population2_topmed/near%E4%B8%AD%E6%96%AD.jpg)
+![](./PART2_GXY/interruption_AF/Population2_topmed/%E8%BF%9C%E7%A6%BB%E4%B8%AD%E6%96%AD.jpg)
 
 
 
