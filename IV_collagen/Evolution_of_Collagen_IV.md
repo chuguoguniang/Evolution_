@@ -835,12 +835,16 @@ mv tem vep.position.2.tsv
 ![](./PART2_GXY/interruption_AF/Population2_topmed/near%E4%B8%AD%E6%96%AD.jpg)
 ![](./PART2_GXY/interruption_AF/Population2_topmed/%E8%BF%9C%E7%A6%BB%E4%B8%AD%E6%96%AD.jpg)
 
+从两个群体的AF频率分布中发现，near中断的AF要低一些，可这与文章报道的near中断附近的表型更轻微不太符合，因为AF低说明变异有害，表型不该更轻微吧。  
+并且两个群体得到的变异点均存在AF，所以没办法做卡方检验。
+
 
 
  
 
-## GXY的重要性  
-根据文献（DOI: 10.1038/srep37831）报道Gly residues in the amino and carboxy termini, the interruptions, and positions 2 and 3 in the Gly-Xaa-Yaa repeats  are not considered critical，对甘氨酸残基进行标注，将GXY repeat中1号位置的G标为1，其余的G标为0
+## 在统计中加一列GXY的位置  
+根据文献（DOI: 10.1038/srep37831）报道Gly residues in the amino and carboxy termini, the interruptions, and positions 2 and 3 in the Gly-Xaa-Yaa repeats  are not considered critical，以Group5数据为例对甘氨酸残基（515个）进行标注，将GXY repeat中1号位置的G标为1；2号位G标2；3号位G标3；中断内的G标i；中断上方的1个G标ni；不在Repeat的G标为0。后输进SPSS进行logistic回归分析，因为SPSS不好同时识别1列的字符和数字，所以将非1的替换为0，在SPSS将致病状态作为因变量，GXY位置为自变量发现是显著的，说明GXY的位置对致病性与否有影响。
+![](./PART2_GXY/GXY_position/GXY_position.png)
 
 
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
