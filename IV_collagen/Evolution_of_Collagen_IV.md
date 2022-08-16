@@ -730,9 +730,20 @@ Sheep的collagen type IV alpha 4 chain对应基因为ENSOARG00000020503
 注意：某列全是-有三种情况：（1）该物种还没开始比对上；（2）该物种上下未中断；（3）该物种上下中断。在COL4A3 COL4A4 COL4A5三个基因不同物种间比较中断时，其实并没完全统一，前面统计有除去中断被-覆盖的物种。  
 至此，COL4A3 COL4A4 COL4A5三个基因在31个物种中GXY中断已比较完毕。总体来看，COL4A5中断比较起来相对简单，新中断情况比较少。
 
-## 由于上述展示中断的样式不佳，所以更改呈现样式：
+### 由于上述展示中断的样式不佳，所以更改呈现样式：
 ### COL4A5
-在WORD中呈现
+在Word中呈现，人科COL4A5的中断截图如下：
+![](./PART2_GXY/Orthologs_GXY/%E4%B8%AD%E6%96%AD%E6%A0%B7%E5%BC%8F%E4%BA%BA%E7%A7%91COL4A5.jpg)
+![](./PART2_GXY/Orthologs_GXY/%E4%B8%AD%E6%96%AD%E6%A0%B7%E5%BC%8F%E4%BA%BA%E7%A7%91COL4A5_2.jpg)
+
+## 探索COL4A3 COL4A4 COL4A5 在中断位置上的关联性
+将旁系同源人三个基因的氨基酸序列进行多序列比对进而比较中断
+在Word中呈现，人COL4A3,COL4A4,COL4A5的中断比较截图如下：
+![](./PART2_GXY/Paralogs_GXY/%E4%BA%BACOL4A3%2C4%2C5%E4%B8%AD%E6%96%AD%E6%AF%94%E8%BE%83_1.jpg)
+![](./PART2_GXY/Paralogs_GXY/%E4%BA%BACOL4A3%2C4%2C5%E4%B8%AD%E6%96%AD%E6%AF%94%E8%BE%83_2.jpg)
+![](./PART2_GXY/Paralogs_GXY/%E4%BA%BACOL4A3%2C4%2C5%E4%B8%AD%E6%96%AD%E6%AF%94%E8%BE%83_3.jpg)
+![](./PART2_GXY/Paralogs_GXY/%E4%BA%BACOL4A3%2C4%2C5%E4%B8%AD%E6%96%AD%E6%AF%94%E8%BE%83_4.jpg)
+![](./PART2_GXY/Paralogs_GXY/%E4%BA%BACOL4A3%2C4%2C5%E4%B8%AD%E6%96%AD%E6%AF%94%E8%BE%83_5.jpg)
 
 
 ## AF与中断   
@@ -848,6 +859,9 @@ mv tem vep.position.2.tsv
 ## 在统计中加一列GXY的位置  
 根据文献（DOI: 10.1038/srep37831）报道Gly residues in the amino and carboxy termini, the interruptions, and positions 2 and 3 in the Gly-Xaa-Yaa repeats  are not considered critical，以Group5数据为例对甘氨酸残基（515个）进行标注，将GXY repeat中1号位置的G标为1；2号位G标2；3号位G标3；中断内的G标i；中断上方的1个G标ni；不在Repeat的G标为0。后输进SPSS进行logistic回归分析，因为SPSS不好同时识别1列的字符和数字，所以将非1的替换为0，在SPSS将致病状态作为因变量，GXY位置为自变量发现是显著的，说明GXY的位置对致病性与否有影响。
 ![](./PART2_GXY/GXY_position/GXY_position.png)
+
+## 使用iqtree建不同级别的树
+
 
 
 # 可选——考虑其它基因家族的演化（比如将肌动蛋白基因作为对比）
