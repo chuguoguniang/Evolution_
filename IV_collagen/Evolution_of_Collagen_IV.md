@@ -861,6 +861,17 @@ mv tem vep.position.2.tsv
 ![](./PART2_GXY/GXY_position/GXY_position.png)
 
 ## 使用iqtree建不同级别的树
+### COL4A5
+(1)MEGA中对人科5条氨基酸序列多序列比对，导出为fasta格式
+(2)iqtree -s renke.allignment.fas -m MF -nt 2  得最佳模型Best-fit model: mtMAM+F chosen according to BIC
+(3)mkdir renke_COL4A5_TREE
+(4)cp ../renke.allignment.fas ./
+(5)iqtree -s renke.allignment.fas -m  mtMAM+F -bb 1000 -nt AUTO #使用最佳模型建树
+(6)将树导进itol查看,导出png
+狭鼻下目同理：Best-fit model: mtMAM+F chosen according to BIC
+![](./PART2_GXY/Orthologs_GXY/IQTREE/%E4%BA%BA%E7%A7%91COL4A5.png)
+![](./PART2_GXY/Orthologs_GXY/IQTREE/%E7%8B%AD%E9%BC%BB%E4%B8%8B%E7%9B%AECOL4A5.png)
+
 
 
 
