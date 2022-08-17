@@ -40,6 +40,9 @@ NJ建树 参数默认 建出的树COL4A5确实与COL4A1挺近 树的PDF文件见
 ```
 ![Original Tree](./iRtOOle2jbw5HH18GvcYfA.svg)  
 图1——氨基酸序列得到的Original Tree
+使用iqtree建树，Best-fit model: mtREV+F+R3 chosen according to BIC
+![](./MEGA/protein/iqtree/protein.all.iqtree.png)
+
 + 分组
 ```
 很明显，可以分为6个直系同源组（每个物种的基因出现一次），没有complex组（一个物种的一个基因多拷贝或少于一个拷贝）.
