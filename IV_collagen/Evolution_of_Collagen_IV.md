@@ -42,6 +42,7 @@ NJ建树 参数默认 建出的树COL4A5确实与COL4A1挺近 树的PDF文件见
 图1——氨基酸序列得到的Original Tree
 使用iqtree建树，Best-fit model: mtREV+F+R3 chosen according to BIC
 ![](./MEGA/protein/iqtree/protein.all.iqtree.png)
+图_使用iqtree建的树（氨基酸序列）
 
 + 分组
 ```
